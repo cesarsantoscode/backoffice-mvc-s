@@ -20,6 +20,7 @@
             <th>Título</th>
             <th>Lenguaje</th>
             <th>Precio de alquiler (USD)</th>
+            <th colspan="2">Acciones</th>
         </tr>
         <tr th:each="film : ${films}">
             <td>
@@ -30,6 +31,12 @@
             <td th:text="${film.title()}"></td>
             <td th:text="${film.language()}"></td>
             <td th:text="${film.rentalRate()}"></td>
+            <td>
+                <a th:href="@{/maintenance/edit/{id}(id=${film.filmId()})}">
+                    Editar
+                </a>
+            </td>
+            <td>Eliminar</td>
         </tr>
     </table>
 

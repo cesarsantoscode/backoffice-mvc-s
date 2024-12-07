@@ -11,4 +11,6 @@ public interface MaintenanceService {
 
     FilmDetailDto getFilmById(int id);
 
+    Boolean updateFilm(FilmDetailDto filmDetailDto);
+
 }
